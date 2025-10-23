@@ -1,6 +1,6 @@
 Introduction:
 
-Multiple Sclerosis (MS) is a chronic neurological disorder affecting the central nervous system, often diagnosed through brain MRI scans. This research focuses on developing an automated system for detecting MS patterns using image processing techniques and deep learning. U-Net are employed for feature extraction and classification and Model Training. The proposed approach aims to improve early and accurate diagnosis, reducing reliance on manual interpretation and enhancing clinical decision-making. Experimental results demonstrate the model’s high accuracy in identifying MS lesions.
+Multiple Sclerosis (MS) is a chronic neurological disorder affecting the central nervous system, often diagnosed through brain MRI scans. This research focuses on developing an automated system for detecting MS patterns using image processing techniques and deep learning. U-Net is employed for feature extraction and classification, and Model Training. The proposed approach aims to improve early and accurate diagnosis, reducing reliance on manual interpretation and enhancing clinical decision-making. Experimental results demonstrate the model’s high accuracy in identifying MS lesions.
 
 Motivation:
 
@@ -8,7 +8,7 @@ Multiple Sclerosis (MS) is a chronic neurological disorder that requires early a
 
 Objective:
 
-To develop an automated system using U-Net and Image Processing for detecting and segmenting MS lesions in brain MRI scans, improving accuracy and aiding neurologists in early diagnosis.
+To develop an automated system using U-Net and Image Processing for detecting and segmenting MS lesions in brain MRI scans, improving accuracy, and aiding neurologists in early diagnosis.
 
 Problem Statement
 
@@ -19,15 +19,15 @@ This project aims to develop an automated system using U-Net and Image Processin
 Block Diagram:
 
 ![alt text](image-1.png)
-MS Dataset The process begins with acquiring a brain MRI dataset with annotated MS lesions, including FLAIR, T1, and T2 modalities.
-Pre-Processing MRI scans undergo essential pre-processing steps such as skull stripping, bias field correction, intensity normalization, and co-registration of modalities.
-Data Partitioning The dataset is split into training, validation, and test sets to ensure robust evaluation and generalization.
-Training and Validation / Test SetThe training and validation set is used for learning and tuning the model.
-The test set is reserved for final evaluation.
-Set Hyperparameters Key hyperparameters like learning rate, batch size, and number of epochs are defined.
-Building CNN Architecture A 2D/3D U-Net architecture is constructed, featuring an encoder-decoder structure with skip connections to capture both contextual and spatial information.
-Network Training The U-Net model is trained using annotated MS lesion masks. Loss functions like Dice Loss or Cross-Entropy are employed to optimize segmentation accuracy.
-Diagnosis Output The trained model outputs segmented MS lesions, enabling lesion detection and localization.
+MS Dataset The process begins with acquiring a brain MRI dataset with annotated MS lesions, including FLAIR, T1, and T2 modalities.
+Pre-Processing MRI scans undergo essential pre-processing steps, including skull stripping, bias field correction, intensity normalization, and co-registration of modalities.
+Data Partitioning: The dataset is split into training, validation, and test sets to ensure robust evaluation and generalization.
+Training and Validation / Test: The training and validation set is used for learning and tuning the model.
+The test set is reserved for final evaluation.
+Set Hyperparameters Key hyperparameters, such as learning rate, batch size, and number of epochs, are defined.
+Building CNN Architecture A 2D/3D U-Net architecture is constructed, featuring an encoder-decoder structure with skip connections to capture both contextual and spatial information.
+Network Training The U-Net model is trained using annotated MS lesion masks. Loss functions like Dice Loss or Cross-Entropy are employed to optimize segmentation accuracy.
+Diagnosis Output The trained model outputs segmented MS lesions, enabling lesion detection and localization.
 Performance Computation Model performance is evaluated using metrics such as Dice Coefficient, Sensitivity, Specificity, and Hausdorff Distance.
 
 Engineering Standards:
@@ -55,7 +55,7 @@ Cross-validation (5-fold).
 Follow PEP8 coding standards.
 Docker for reproducibility (base image: python:3.10).
 6. Ethics & Documentation
-Data Anonymization for patient privacy.
+Data Anonymization for Patient Privacy.
 Comply with HIPAA or GDPR.
 Document all steps: data collection to evaluation.
 
@@ -81,6 +81,6 @@ Pandas & NumPy: For organizing and processing data.
 Matplotlib & Seaborn: For data visualization.
 Zipfile: For handling the dataset's zip format.
 Scikit-learn: For data splitting and evaluation.
-Dataset Used: Used Mendeley dataset for multiple sclerosis in mri image in nii. format and converted to jpeg format and invivo (n=455) for general mri images.
+Dataset Used: Used the Mendeley dataset for multiple sclerosis in MRI images in NII. format and converted to jpeg format and invivo (n=455) for general mri images.
 Google Colab: The free platform for running and accelerating the code (with GPUs).
 
